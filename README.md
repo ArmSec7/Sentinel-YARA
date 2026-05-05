@@ -10,7 +10,7 @@
 
 <br>
 
-O **SentinelYara** é um motor avançado de caça a ameaças (*Threat Hunting*) e varredura estática. Desenvolvido para equipes de *Blue Team* e resposta a incidentes, ele combina o poder de detecção de assinaturas do YARA com o processamento assíncrono do Python, criando uma barreira de defesa robusta e de alta velocidade.
+O **SentinelYara** é um motor avançado de caça a ameaças (*Threat Hunting*) e varredura estática. Desenvolvido para resposta a incidentes, ele combina o poder de detecção de assinaturas do YARA com o processamento assíncrono do Python, criando uma barreira de defesa robusta e de alta velocidade.
 
 ---
 
