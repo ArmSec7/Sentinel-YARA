@@ -10,7 +10,7 @@
 
 <br>
 
-O **SentinelYara** é um motor avançado de caça a ameaças (*Threat Hunting*) e varredura estática. Desenvolvido para resposta a incidentes, ele combina o poder de detecção de assinaturas do YARA com o processamento assíncrono do Python, criando uma barreira de defesa robusta e de alta velocidade.
+O **SentinelYara** é um motor avançado de caça a ameaças (*Threat Hunting*) e varredura estática. Desenvolvido para equipes de *Blue Team* e resposta a incidentes, ele combina o poder de detecção de assinaturas do YARA com o processamento assíncrono do Python, criando uma barreira de defesa robusta e de alta velocidade.
 
 ---
 
@@ -29,8 +29,25 @@ Certifique-se de ter o Python 3.8 ou superior instalado.
 
 ```bash
 # 1. Clone o repositório
-git clone [https://github.com/SEU_USUARIO/SentinelYara.git](https://github.com/SEU_USUARIO/SentinelYara.git)
+git clone [https://github.com/SEU_USUARIO/Sentinel-YARA.git](https://github.com/SEU_USUARIO/Sentinel-YARA.git)
 cd SentinelYara
+
+Nota para Windows: A compilação do yara-python pode exigir o Microsoft C++ Build Tools.
+
+📖 Documentação da CLI (Command Line Interface)O motor é operado integralmente via terminal para facilitar a automação via scripts.ParâmetroFlag CurtaDescriçãoObrigatório--rules-rCaminho para o arquivo .yar ou diretório contendo o ruleset.✅ Sim--target-tArquivo ou diretório alvo para a varredura.✅ Sim--watch-wAtiva o Escudo Ativo (Monitoramento contínuo em background).❌ Não--quarantine-qMove ameaças detectadas para a pasta segura /Quarentena.❌ Não--reportN/AGera o log de auditoria relatorio_sentinel.json ao final.❌ N
 
 # 2. Instale as dependências requeridas
 pip install -r requirements.txt
+
+
+🔬 Exemplos de Uso
+1. Varredura Tática Completa (Com Relatório e Quarentena)
+Ideal para escanear pen-drives ou pastas suspeitas.
+python sorcerer.py --rules rules.yar --target ./suspect_folder --quarantine --report
+
+2. Modo NGAV (Escudo Ativo de Diretório)
+Ideal para monitorar a pasta de "Downloads" do sistema.
+python sorcerer.py -r rules.yar -t C:\Users\User\Downloads -w -q
+
+⚠️ Disclaimer Ético
+O SentinelYara foi desenvolvido estritamente para fins educacionais e de defesa cibernética. O autor não se responsabiliza pelo uso indevido desta ferramenta. Certifique-se de ter autorização explícita antes de realizar varreduras em ambientes corporativos ou de terceiros.
