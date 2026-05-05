@@ -1,0 +1,13 @@
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos gerados pela ferramenta
+Quarentena/
+relatorio_sentinel.json
+
+# Arquivos de compilação do PyInstaller (.exe)
+build/
+dist/
+*.spec
+*.exe

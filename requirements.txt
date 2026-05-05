@@ -1,0 +1,4 @@
+yara-python
+colorama
+tqdm
+watchdog
